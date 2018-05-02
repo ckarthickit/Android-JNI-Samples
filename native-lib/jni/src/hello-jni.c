@@ -15,7 +15,6 @@
  *
  */
 #include <string.h>
-#include <jni.h>
 #include "hello-jni.h"
 
 jstring Java_com_android_karthick_hellojni_HelloJniActivity_stringFromJNI( JNIEnv* env, jobject thiz ){

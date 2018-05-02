@@ -14,5 +14,5 @@
  * limitations under the License.
  *
  */
-
-jstring Java_com_android_karthick_hellojni_HelloJniActivity_stringFromJNI( JNIEnv* env, jobject thiz );
+#include <jni.h>
+JNIEXPORT jstring JNICALL Java_com_android_karthick_hellojni_HelloJniActivity_stringFromJNI( JNIEnv* env, jobject thiz );
