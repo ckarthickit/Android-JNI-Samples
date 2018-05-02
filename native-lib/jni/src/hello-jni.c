@@ -16,17 +16,9 @@
  */
 #include <string.h>
 #include <jni.h>
+#include "hello-jni.h"
 
-/* This is a trivial JNI example where we use a native method
- * to return a new VM String. See the corresponding Java source
- * file located at:
- *
- *   apps/samples/hello-jni/project/src/com/example/hellojni/HelloJni.java
- */
-jstring
-Java_com_android_karthick_hellojni_HelloJniActivity_stringFromJNI( JNIEnv* env,
-                                                  jobject thiz )
-{
+jstring Java_com_android_karthick_hellojni_HelloJniActivity_stringFromJNI( JNIEnv* env, jobject thiz ){
 #if defined(__arm__)
   #if defined(__ARM_ARCH_7A__)
     #if defined(__ARM_NEON__)

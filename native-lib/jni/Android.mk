@@ -17,6 +17,13 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE    := hello-jni
-LOCAL_SRC_FILES := hello-jni.c
+LOCAL_SRC_FILES := src/hello-jni.c
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/inc/
+#LOCAL_CFLAGS += -I$(LOCAL_PATH)/inc/
+#LOCAL_CPPFLAGS :=
+#LOCAL_LDLIBS := -lxyz
+#LOCAL_EXPORT_CFLAGS := -DFOO=1 #applies for all modules
+#LOCAL_CFLAGS := -DBAR=2  #applies only for this module
 
+LOCAL_CPP_FEATURES := rtti
 include $(BUILD_SHARED_LIBRARY)
