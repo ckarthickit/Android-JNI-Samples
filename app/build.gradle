@@ -17,6 +17,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    /*
+     * externalNativeBuild API was introduces in gradle 2.2.0
+     * dependencies {
+     *           classpath 'com.android.tools.build:gradle:2.2.0'
+     * }
+     *
+     *  */
     externalNativeBuild {
         ndkBuild {
             path '../native-lib/jni/Android.mk'
